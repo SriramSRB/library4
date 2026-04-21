@@ -84,5 +84,5 @@ resource "aws_instance" "library4_server" {
         volume_size = 16
         volume_type = "gp3"
     }
-    tags = { name = "library4-server" }
+    tags = { Name = "library4-server" }
 }
