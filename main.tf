@@ -11,7 +11,7 @@ resource "aws_subnet" "public_subnet" {
     vpc_id                  = aws_vpc.library4_vpc.id
     cidr_block              = "10.0.0.0/21"
     map_public_ip_on_launch = true
-    availability_zon        = "ap-south-1a"
+    availability_zone        = "ap-south-1a"
     tags                    = { Name = "library4-subnet"}
 }
 
@@ -70,7 +70,7 @@ resource "aws_security_group" "library4_sg" {
 
 resource "aws_key_pair" "library4_key" {
     key_name   = "library4-key"
-    public_key = file("f:file/devops/library4/library4-key.pub")
+    public_key = file("f:/file/devops/library4/library4-key.pub")
 }
 
 resource "aws_instance" "library4_server" {
