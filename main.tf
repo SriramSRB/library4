@@ -74,11 +74,11 @@ resource "aws_key_pair" "library4_key" {
 }
 
 resource "aws_instance" "library4_server" {
-    ami = "ami-05d2d839d4f73aafb"
-    instance_type = "m7i-flex.large"
-    subnet_id = aws_subnet.public_subnet.id
+    ami                    = "ami-05d2d839d4f73aafb"
+    instance_type          = "m7i-flex.large"
+    subnet_id              = aws_subnet.public_subnet.id
     vpc_security_group_ids = [aws_security_group.library4_sg.id]
-    key_name = aws_key_pair.library4_key.key_name
+    key_name               = aws_key_pair.library4_key.key_name
 
     root_block_device {
         volume_size = 16
